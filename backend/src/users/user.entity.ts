@@ -1,16 +1,21 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { ApiProperty } from '@nestjs/swagger';
 
 @Entity()
 export class User {
+  @ApiProperty()
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @ApiProperty()
+  @Column({ type: 'varchar', length: 255 })
   firstName: string;
 
-  @Column()
+  @ApiProperty()
+  @Column({ type: 'varchar', length: 255 })
   lastName: string;
 
-  @Column({ unique: true })
+  @ApiProperty()
+  @Column({ unique: true, type: 'varchar', length: 255 })
   email: string;
 }
