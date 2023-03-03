@@ -1,5 +1,6 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export class addProductTable1678019392498 implements MigrationInterface {
   name = 'addProductTable1678019392498';
 
