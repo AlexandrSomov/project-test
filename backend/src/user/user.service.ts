@@ -43,7 +43,7 @@ export class UserService {
     return this.userRepository.update(id, user);
   }
 
-  async updateAvatar(avatar: Express.Multer.File) {
+  async updateAvatar(avatar: Express.Multer.File): Promise<{ upload: File; message: string }> {
     const upload = await this.fileService.uploadFile(avatar);
     const user = new User();
 
