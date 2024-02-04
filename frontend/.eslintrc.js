@@ -24,6 +24,7 @@ overrides: [
             'import/no-import-module-exports': 'off',
             'react/jsx-props-no-spreading': 'off',
             'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
+            'import/no-extraneous-dependencies': ["error", {"devDependencies": true}]
         },
     },
 ],
